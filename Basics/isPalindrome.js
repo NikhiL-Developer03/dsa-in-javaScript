@@ -13,3 +13,24 @@
 // }
 // const ans = ispalindrome(450);
 // console.log(ans);
+
+// 1. WAP to check whether a number is Palindrome Number or not
+//     (121,1234321)
+
+// Palindrome n = 12321 = 12321
+
+// function isPalindrome(num) {
+//   let n = num;
+//   let rem = 0;
+//   let res = 0;
+//   while (n) {
+//     rem = n % 10;
+//     res = res * 10 + rem;
+//     n = Math.floor(n / 10);
+//   }
+//   res===num ? console.log(`Palindrome Number : ${res}`) : console.log(`Not Palindrome : ${res}`);
+// }
+
+// isPalindrome(121);
+// isPalindrome(12321);
+// isPalindrome(12345);
