@@ -8,13 +8,15 @@
 const arr = [1, 2, 3, 4, "Hello", { name: "nikhil" }, [1234], 9];
 
 // console.log(arr);
-// console.log(Array);
+// console.log(typeof arr);
+// console.log(Array); //[Function: Array]
+// console.log(typeof Array); //[Function: Array]
 
 // How to access first and last element of array
 
 // console.log(arr.length);
 // console.log(arr[0]);
-// console.log(arr[arr.length - 2]);
+// console.log(arr[arr.length - 1]);
 
 // how to remove element in array
 

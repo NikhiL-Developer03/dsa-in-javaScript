@@ -1,7 +1,7 @@
 // Question 3: Count the number of digits of a number
 
 function countDigits(num){
-  num = Math.abs(num);
+  num = Math.abs(num); //edge-case
   let count = 0;
   while(num!=0){
     count++;

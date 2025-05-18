@@ -1,18 +1,4 @@
-
 # Practise Loop, functions & Math Problems
-
-### List of Question 
-
-```text
-Question 1: Sum of all natural numbers from 1 to n
-Question 2: Sum of digits of a number
-Question 3: Count the number of digits of a number
-Question 4: Check if a number is palindrome
-Question 5: Find nth Fibonacci number
-Question 6: Missing Number in an Array
-
-```
-
 
 ### Question 1: Sum of all natural numbers from 1 to n
 
