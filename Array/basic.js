@@ -7,50 +7,62 @@
 
 const arr = [1, 2, 3, 4, "Hello", { name: "nikhil" }, [1234], 9];
 
+// console.log(arr); // [ 1, 2, 3, 4, 'Hello', [ 1234 ], 9 ]
+// console.log(typeof arr); // object
+// console.log(Array); // [Function: Array]
+// console.log(typeof Array); // function
+
+// How do you access the first and last elements of an array?
+
+// const firstElement = arr[0]; //O(1)
+// const arrLength = arr.length; 
+// const lastElement = arr[arrLength - 1];
+// console.log(firstElement, arrLength, lastElement);
+
+// How do you remove the last element from an array?
+
+// const lastElement1 = arr.pop(); // O(1)
+// console.log(arr, lastElement1); 
+
+// How do you add an element to the end of an array?
+
+// arr.push(5); // O(1)
 // console.log(arr);
-// console.log(typeof arr);
-// console.log(Array); //[Function: Array]
-// console.log(typeof Array); //[Function: Array]
 
-// How to access first and last element of array
+// How do you add an element to the start of an array?
 
-// console.log(arr.length);
-// console.log(arr[0]);
-// console.log(arr[arr.length - 1]);
-
-// how to remove element in array
-
-// const lastElement = arr.pop();
-// console.log(lastElement)
-// console.log(arr);
-
-// const firstElement = arr.unshift(786);
-// console.log(firstElement); //it return the length og array after deleting the element
+// const firstElement = arr.unshift(786); //O(N)
+// console.log(firstElement); //it return the length of array after adding the element
 // console.log(arr)
 
-// const shift = arr.shift();
-// console.log(shift); //it return the first element of array
-// console.log(arr); //it return the array after deleting the first element of array
+// How do you remove the first element from an array?
 
-// Looping in javaScript
+// const shift = arr.shift(); // O(N)
+// console.log(shift); // it return the first element of array
+// console.log(arr);
+
+// How do you loop through an array in JavaScript?
+
 // for(let i=0;i<arr.length;i++){
-//   console.log(arr[i]);
+//   console.log(i,arr[i]);
 // }
 
 // arr.forEach((element,index) => {
 //   console.log(index,element)
 // });
 
+// for of loop
 // for(let i of arr){
 //   console.log(i);
 // }
 
+// for in loop 
 // for(let i in arr){
 //   console.log(i,arr[i]);
 // }
 
-// arr.map((item) => {
-//   console.log(item);
+// arr.map((item,index) => {
+//   console.log(index,item);
 // });
 
 // Ques-1 How do you check if an element exists in an array
@@ -63,9 +75,11 @@ const findElement = (arr, target) => {
   }
   return false;
 };
+// console.log(arr);
 // console.log(findElement(arr,9)); //true
 // console.log(findElement(arr,0)); //false
 
+// Includes - check exit or not and return true and false
 // console.log(arr.includes(4)); //true
 // console.log(arr.includes(10)); //false
 
@@ -79,7 +93,12 @@ const findElementIndex = (arr, target) => {
   }
   return -1;
 };
-// console.log(findElementIndex(arr,3));
+// console.log(arr);
+// console.log(findElementIndex(arr, 3));
+// console.log(findElementIndex(arr, 6));
+
+//indexof - check the index exit or not in that array and retur index of particular item
+
 // console.log(arr.indexOf(4));
 
 // How to delete, add and upadet from a specific index
@@ -90,16 +109,23 @@ const findElementIndex = (arr, target) => {
 // last index not considered in it
 
 // console.log(arr);
-// console.log(arr.slice(0,3));
-// console.log(arr.slice(-5));
+// console.log(arr.slice(0)); // complete array
+// console.log(arr.slice(0,3)); // [ 1, 2, 3 ]
+// console.log(arr.slice(-1));  // [ 9 ]
+// console.log(arr.slice(-5)); // [ 4, 'Hello', { name: 'nikhil' }, [ 1234 ], 9 ]
+
+// splice() vs slice()
 
 // splice() method will change the contents of the original array
 // splice() method is used to add or remove elements of an existing array and the return value will be the removed items from the array.
-// splice(start, optional delete count, optional items to add)
+// splice(start, optional- delete count, optional - items to add)
 
-// console.log(arr.splice(1,2))
 // console.log(arr);
-// console.log(arr.splice(1,0,2,3))
+// console.log(arr.splice(1,2)) // [ 2, 3 ]
+// console.log(arr);
+
+// console.log(arr);
+// console.log(arr.splice(1,0,1,3))
 // console.log(arr);
 
 // shallow copy of array
@@ -115,61 +141,78 @@ const findElementIndex = (arr, target) => {
 // deep copy of Array
 
 // let arr1 = [1,2,3,4,5,6,7];
+// let arr2 = [...arr1]; // spread 
+// // let arr2 = Array.from(arr1); //from() method
+// // let arr2 = arr1.concat(); //concat
 
-// let arr2 = [...arr1];
-// let arr2 = Array.from(arr1);
-// let arr2 = arr1.concat();
+// console.log("before arr1 :",arr1);
+// console.log("before arr2 :",arr2);
+// console.log("splice from arr2 :",arr2.splice(1,3));
+// console.log("after arr1 :",arr1);
+// console.log("after arr2 :",arr2);
 
-// console.log("before :",arr1);
-// console.log("before :",arr2);
-// console.log(arr2.splice(1,3));
-// console.log("after :",arr1);
-// console.log("after Delete arr2 :",arr2);
+// How to concatenate two arrays in JavaScript?
 
-//How to add two array in javaScript
+// let arr1 = [1, 2, 3, 4, 5, 6, 7]
+// let arr2 = [8, 9, 10]
+// const newArr1 = [...arr1, 8, 9, 10];
+// const newArr2 = arr1.concat(arr2);
+// console.log("newArr1 : ", newArr1);
+// console.log("newArr2 : ", newArr2);
 
-// const newArr = [...arr,9211,786];
-// console.log(newArr);
+// How can you check if two arrays are equal?
 
-// let backup = arr.concat();
-// console.log(backup);
-
-// how to check two array are equal or Not
-
-let arr1 = [1, 2, 3, 4, 5, 6];
-let arr2 = [1, 2, 3, 4, 5, 6];
+// let arr1 = [1, 2, 3, 4, 5, 6];
+// let arr2 = [1, 2, 3, 4, 5, 6];
 
 const isArrayEqual = (arr1, arr2) => {
-  // if (arr1.length !== arr2.length) {
-  //   return false;
-  // }
-  // for (let index = 0; index < arr1.length; index++) {
-  //   if (arr1[index] !== arr2[index]) {
-  //     return false;
-  //   }
-  // }
-  // return true;
+  //edge-case
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let index = 0; index < arr1.length; index++) {
+    if (arr1[index] !== arr2[index]) {
+      return false;
+    }
+  }
+  return true;
 
-  return arr1.length === arr2.length && arr1.every((ele, i) => arr1[i] === arr2[i])
- 
+  // One Line solution
+  // return arr1.length === arr2.length && arr1.every((ele, i) => arr1[i] === arr2[i]);
+
 };
-
 // console.log(isArrayEqual(arr1, arr2));
 
-// How to sort an array in ascending or descending order in array ?
+// How to sort an array in ascending and descending order?
+// sort() // O(NLogN)
 
-// const x = [1,4,6,9,0,-9,-5,123];
-// console.log(x.sort()); 
-// console.log(x.sort((x,y)=>(x-y)));
-// console.log(x.sort((x,y)=>(y-x)));
+const x = [1, 4, 6, 9, 0, -9, -5, 123];
+// console.log(x.sort()); // [-5, -9, 0, 1,123,  4, 6, 9]
+// console.log(x.sort((x, y) => (x - y))); // ascending
+// console.log(x.sort((x, y) => (y - x))); // descending
 
-// how to reverse an array?
+// Just knowing and testing purpose
 
-// const x = [1,4,6,9,0,-9,-5,123];
-// console.log(x.reverse());
+// let asc = x.sort((a, b) => {
+//   if (a < b) return -1; // a comes first
+//   if (a > b) return 1;  // b comes first
+//   return 0;             // no change
+// });
+// // This works the same way:
+// // a - b < 0 → a comes first
+// // a - b > 0 → b comes first
+// // a - b == 0 → no change
+// console.log(asc);
 
+
+// How to reverse an array?
+
+// const y = [1, 4, 6, 9, 0, -9, -5, 123];
+// console.log(y.reverse());
+
+// How to flat array of arry(inside another array)
 // Flat: [1,2,3,4,5,6,7,8,9]
 
-// const y = [1,2,[3,[4,5]],6,7,8,9];
-// console.log(y.flat(2));
+// const z = [1, 2, [3, [4, 5]], 6, 7, 8, 9];
+// console.log(z.flat(2));
 
