@@ -186,7 +186,8 @@ const isArrayEqual = (arr1, arr2) => {
 // How to sort an array in ascending and descending order?
 // sort() // O(NLogN)
 
-const x = [1, 4, 6, 9, 0, -9, -5, 123];
+let x = [1, 4, 6, 9, 0, -9, -5, 123];
+
 // console.log(x.sort()); // [-5, -9, 0, 1,123,  4, 6, 9]
 // console.log(x.sort((x, y) => (x - y))); // ascending
 // console.log(x.sort((x, y) => (y - x))); // descending
@@ -209,6 +210,22 @@ const x = [1, 4, 6, 9, 0, -9, -5, 123];
 
 // const y = [1, 4, 6, 9, 0, -9, -5, 123];
 // console.log(y.reverse());
+
+// Map, Filter & Reduce
+
+// const newMapArr = x.map((ele, i) => ele * ele);
+// console.log(newMapArr);
+
+// const positiveNumbers = x.filter((ele, i) => ele > 0);
+// console.log("Positive Num :",positiveNumbers);
+
+// const sumOFArr = positiveNumbers.reduce((acc, ele) => acc + ele);
+// console.log("Sum of Num :",sumOFArr);
+
+// filter() vs find()
+
+// const positiveNumber = x.find((ele, i) => ele > 0);
+// console.log(positiveNumber);
 
 // How to flat array of arry(inside another array)
 // Flat: [1,2,3,4,5,6,7,8,9]
